@@ -1,0 +1,43 @@
+/* UTILITIES */
+.flow > * + * {
+  margin-top: 1.75rem;
+}
+
+.mt-xl {
+  margin-top: 2em;
+}
+.mt-l {
+  margin-top: 1.5em;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* GENERAL LAYOUT */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+@media screen and (min-width: 40em) {
+  section {
+    padding: 5rem 0;
+  }
+}

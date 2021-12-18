@@ -1,0 +1,63 @@
+:root {
+  --clr-primary-600: #30475e; /* LIGHT PRIMARY */
+  --clr-primary-800: #222831; /* DARK PRIMARY */
+  --clr-primary-900: #161b22;
+
+  --clr-accent-400: #f05454; /* MAIN BRAND COLOR */
+  --clr-accent-500: #d34242;
+
+  --clr-bg-200: #f5ede9; /* MAIN LIGHT */
+  --clr-bg-300: #e6d9d3;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #f1f1f1;
+  --clr-neutral-700: #333;
+  --clr-neutral-900: #000;
+}
+
+.bg-light {
+  --fg: var(--clr-neutral-100);
+  --bg: var(--clr-primary-800);
+  --bg-hover: var(--clr-primary-900);
+  color: var(--clr-neutral-900);
+  background: var(--clr-bg-200);
+}
+
+.bg-accent {
+  --fg: var(--clr-neutral-900);
+  --bg: var(--clr-neutral-100);
+  --bg-hover: var(--clr-neutral-200);
+  color: var(--clr-neutral-200);
+  background: linear-gradient(
+    -45deg,
+    var(--clr-accent-400),
+    var(--clr-accent-500)
+  );
+}
+
+.bg-dark {
+  --fg: var(--clr-neutral-100);
+  --bg: var(--clr-accent-400);
+  --bg-hover: var(--clr-accent-500);
+  color: var(--clr-neutral-200);
+  background: linear-gradient(
+    -45deg,
+    var(--clr-primary-800),
+    var(--clr-primary-900)
+  );
+}
+
+.bg-dark a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  transition: opacity 200ms ease;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* GENERAL COLORS */
+body {
+  color: var(--clr-neutral-900);
+  background: var(--clr-bg-200);
+}
