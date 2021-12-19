@@ -72,7 +72,7 @@
         <div class="container mt-l search-bar">
           <input class="shadow-sm" type="text" placeholder="Search..." />
         </div>
-        <div class="container products">
+        <div class="container products" featured="false">
           <div class="product-card shadow">
             <a href="./product.html" class="product-card__inner">
               <i class="fas fa-search product-card__read"></i>
@@ -148,10 +148,12 @@
                 <p class="product-card__info-price fs-300">$500</p>
               </div>
             </a>
-            <a class="product-card__cart" href="#add-to-cart">
-              <i class="fas fa-shopping-cart fs-300"></i>
-              <p class="fs-300 fw-300">Add to cart</p>
-            </a>
+            <div id="cart-button">
+              <a class="product-card__cart not-in-cart" href="#add-to-cart">
+                <i class="fas fa-shopping-cart fs-300"></i>
+                <p class="fs-300 fw-300">Add to cart</p>
+              </a>
+            </div>
           </div>
           <div class="product-card shadow">
             <a href="./product.html" class="product-card__inner">
