@@ -664,7 +664,30 @@ footer {
   opacity: 0.7;
 }
 
+.product-card__no-results {
+  padding: 1rem;
+  color: var(--clr-neutral-100);
+}
+
 .in-cart {
   background: #0d5846;
+}
+
+.alert {
+  margin: 10px auto;
+  padding: 10px 50px;
+  border-radius: 3px;
+}
+
+.alert__error-message {
+  color: red;
+  background-color: #f8dbdb;
+  border: solid 1px red;
+}
+
+.alert__success-message {
+  color: green;
+  background-color: #cee2ce;
+  border: solid 1px green;
 }
 /*# sourceMappingURL=styles.css.map */

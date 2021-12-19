@@ -44,7 +44,7 @@ function renderProducts(results) {
 
     productGrid.innerHTML += `
     <div class="product-card">
-        <a href="./product.html&_id=${product._id}" class="product-card__inner">
+        <a href="./product.html?_id=${product._id}" class="product-card__inner">
               <i class="fas fa-search product-card__read"></i>
               <img
                 src="${product.image.formats.small.url}"

@@ -1,0 +1,17 @@
+.alert {
+  margin: 10px auto;
+  padding: 10px 50px;
+  border-radius: 3px;
+}
+
+.alert__error-message {
+  color: red;
+  background-color: rgb(248, 219, 219);
+  border: solid 1px red;
+}
+
+.alert__success-message {
+  color: green;
+  background-color: rgb(206, 226, 206);
+  border: solid 1px green;
+}

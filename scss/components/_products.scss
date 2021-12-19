@@ -71,6 +71,10 @@
       opacity: 0.7;
     }
   }
+  &__no-results {
+    padding: 1rem;
+    color: var(--clr-neutral-100);
+  }
 }
 
 .in-cart {
