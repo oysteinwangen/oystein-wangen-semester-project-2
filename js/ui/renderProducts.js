@@ -47,7 +47,7 @@ function renderProducts(results) {
         <a href="./product.html?slug=${product.slug}" class="product-card__inner">
               <i class="fas fa-search product-card__read"></i>
               <img
-                src="${product.image.formats.small.url}"
+                src="${product.image_url}"
                 alt="Product image"
                 class="product-card__image"
               />
@@ -58,7 +58,7 @@ function renderProducts(results) {
                 <p class="product-card__info-price fs-300">$${product.price}</p>
               </div>
         </a>
-        <div id="cart-button" in-cart="${cartToggle}" data-slug="${product.slug}" data-title="${product.title}" data-image="${product.image.formats.small.url}" data-price="${product.price}">
+        <div id="cart-button" in-cart="${cartToggle}" data-slug="${product.slug}" data-title="${product.title}" data-image="${product.image_url}" data-price="${product.price}">
         ${cartButton}
       </div>
     </div>
