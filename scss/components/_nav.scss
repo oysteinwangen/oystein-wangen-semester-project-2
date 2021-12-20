@@ -8,6 +8,10 @@
     transition: color 200ms ease;
   }
 }
+.menu {
+  display: flex;
+  gap: 0.8rem;
+}
 
 .admin-menu {
   margin-left: auto;

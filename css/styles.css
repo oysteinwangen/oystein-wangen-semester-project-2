@@ -313,6 +313,10 @@ textarea:focus {
   max-width: 400px;
 }
 
+textarea {
+  min-height: 15rem;
+}
+
 .vertical-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +424,13 @@ input:checked + .slider:before {
   margin-left: auto;
   -webkit-transition: color 200ms ease;
   transition: color 200ms ease;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
 }
 
 .admin-menu {
@@ -1053,6 +1064,14 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.sub-total {
+  background: var(--clr-bg-300);
+  border-radius: 3px;
+  text-align: center;
+  padding: 0.7rem;
+  margin-top: 2rem !important;
+}
+
 @media screen and (min-width: 35em) {
   .cart-item {
     -webkit-box-orient: horizontal;
@@ -1104,5 +1123,46 @@ h1 {
 
 .home-hero {
   padding: 3rem 0;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--clr-accent-400);
+  border-color: var(--clr-accent-400) transparent var(--clr-accent-400) transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

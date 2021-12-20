@@ -11,9 +11,12 @@ function renderCart() {
 
   const cartList = document.querySelector(".cart-list");
   cartList.innerHTML = "";
+  const totalsContainer = document.querySelector(".totals-container");
+  let totals = 0;
 
   if (cartItems.length < 1) {
     alertMessage("normal", "You currently have no items in cart", ".cart-list");
+    totalsContainer.innerHTML = "";
   } else {
     cartItems.forEach((product) => {
       cartList.innerHTML += `
@@ -38,7 +41,13 @@ function renderCart() {
                         </div>
                       </a>
                     </div>
+                    
               `;
+      totals = totals + parseFloat(product.price);
+
+      totalsContainer.innerHTML = `
+      <p class="sub-total container mini-container">Total in cart: $${totals}</p>
+      `;
     });
   }
 

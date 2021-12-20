@@ -68,7 +68,7 @@
           <h1>Add product</h1>
         </div>
         <div class="container mini-container centered-flex">
-          <div class="message-container mt-m"></div>
+          <div style="max-width: 40ch" class="message-container mt-m"></div>
           <form class="vertical-form product-form">
             <input type="text" id="title" placeholder="Title" />
             <input type="number" id="price" placeholder="Price" />
@@ -79,7 +79,7 @@
             </label>
             <textarea id="description" placeholder="Description"></textarea>
             <label for="image">Upload image</label>
-            <input type="file" name="image" id="image" />
+            <input type="file" name="image" id="image" required />
             <button class="button mt-m" id="login-button">Add product</button>
           </form>
         </div>

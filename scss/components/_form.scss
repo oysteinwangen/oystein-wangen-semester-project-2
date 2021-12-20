@@ -30,6 +30,10 @@ textarea {
   }
 }
 
+textarea {
+  min-height: 15rem;
+}
+
 .vertical-form {
   display: flex;
   flex-direction: column;

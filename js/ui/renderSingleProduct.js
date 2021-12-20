@@ -36,7 +36,7 @@ function renderSingleProduct(product) {
   let authEdit = "";
   if (username) {
     authEdit = `
-    <a href="./edit.html?slug=${product.slug}" class="button fs-300 edit-button">
+    <a href="./edit.html?id=${product.id}&slug=${product.slug}" class="button fs-300 edit-button">
     <p>Edit product</p><i class="fas fa-pencil-alt fs-200"></i>
     </a>
     `;
