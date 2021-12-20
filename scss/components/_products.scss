@@ -15,6 +15,7 @@
   border-radius: 5px;
   overflow: hidden;
   max-width: 330px;
+  width: 100%;
   box-shadow: 0 0.5rem 1rem #2b35422a;
   & a {
     text-decoration: none;
@@ -43,6 +44,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: auto;
     padding: 1.2rem 0.5rem;
     &-title {
       margin-bottom: 0.3rem;

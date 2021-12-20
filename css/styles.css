@@ -716,6 +716,7 @@ footer {
   border-radius: 5px;
   overflow: hidden;
   max-width: 330px;
+  width: 100%;
   -webkit-box-shadow: 0 0.5rem 1rem #2b35422a;
           box-shadow: 0 0.5rem 1rem #2b35422a;
 }
@@ -761,6 +762,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: auto;
   padding: 1.2rem 0.5rem;
 }
 
