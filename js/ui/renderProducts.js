@@ -1,4 +1,5 @@
 import { getExistingCartItems } from "../utilities/cartFunctions.js";
+import cartCounter from "../utilities/cartCounter.js";
 
 const cartItems = getExistingCartItems();
 
@@ -41,7 +42,6 @@ function renderProducts(results) {
       cartToggle = true;
       cartButton = cartButtonInCart;
     }
-    console.log(product.image_url);
 
     productGrid.innerHTML += `
     <div class="product-card">
@@ -102,6 +102,7 @@ function renderProducts(results) {
       );
       saveCartItems(newCartItems);
     }
+    cartCounter();
   }
 
   function saveCartItems(cartItems) {

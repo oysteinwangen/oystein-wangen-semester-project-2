@@ -1,11 +1,12 @@
 import renderSingleProduct from "./ui/renderSingleProduct.js";
 import alertMessage from "./components/alert.js";
+import { baseUrl, productsUrl } from "./settings/api.js";
 
 /* GET SINGLE PRODUCT */
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const slug = urlParams.get("slug");
-const url = "https://strapi-sp2-ow.herokuapp.com/products" + "/" + slug;
+const url = baseUrl + productsUrl + slug;
 
 const htmlTitle = document.querySelector("title");
 

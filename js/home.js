@@ -1,6 +1,7 @@
 import alertMessage from "./components/alert.js";
+import { baseUrl, homeUrl } from "./settings/api.js";
 
-const url = "https://strapi-sp2-ow.herokuapp.com/home";
+const url = baseUrl + homeUrl;
 
 const heroImage = document.querySelector(".hero-image");
 

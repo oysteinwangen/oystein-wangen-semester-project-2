@@ -1,5 +1,6 @@
 import { getExistingCartItems } from "./utilities/cartFunctions.js";
 import alertMessage from "./components/alert.js";
+import cartCounter from "./utilities/cartCounter.js";
 
 function saveCartItems(cartItems) {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -60,6 +61,7 @@ function renderCart() {
     const slug = this.dataset.slug;
     const newCartItems = cartItems.filter((cartItem) => cartItem.slug !== slug);
     saveCartItems(newCartItems);
+    cartCounter();
   }
 }
 renderCart();

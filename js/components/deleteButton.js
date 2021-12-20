@@ -1,6 +1,5 @@
-import { getToken } from "./storage.js";
-
-const baseUrl = "https://strapi-sp2-ow.herokuapp.com/";
+import { getToken } from "../utilities/storage.js";
+import { baseUrl, productsUrl } from "../settings/api.js";
 
 export default function deleteButton(id) {
   const container = document.querySelector(".delete-container");
@@ -19,7 +18,7 @@ export default function deleteButton(id) {
     const doDelete = confirm("Are you sure you want to delete this product?");
 
     if (doDelete) {
-      const url = baseUrl + "products/" + id;
+      const url = baseUrl + productsUrl + id;
 
       const token = getToken();
 

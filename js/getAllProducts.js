@@ -1,9 +1,10 @@
 import renderProducts from "./ui/renderProducts.js";
 import alertMessage from "./components/alert.js";
 import { searchFilter } from "./utilities/searchFilter.js";
+import { baseUrl, productsUrl } from "./settings/api.js";
 
 /* GET ALL AND FEATURED PRODUCTS */
-const url = "https://strapi-sp2-ow.herokuapp.com/products";
+const url = baseUrl + productsUrl;
 
 const featured = document.querySelector(".products").getAttribute("featured");
 

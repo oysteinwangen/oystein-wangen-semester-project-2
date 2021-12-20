@@ -1,12 +1,11 @@
 import alertMessage from "./components/alert.js";
 import { getToken } from "./utilities/storage.js";
+import { baseUrl, productsUrl } from "./settings/api.js";
 
 const token = getToken();
 if (!token) {
   location.href = "./";
 }
-
-const baseUrl = "https://strapi-sp2-ow.herokuapp.com/";
 
 const form = document.querySelector(".product-form");
 const title = document.querySelector("#title");
@@ -60,7 +59,7 @@ async function addProduct(
   featured,
   image_url
 ) {
-  const url = baseUrl + "products";
+  const url = baseUrl + productsUrl;
 
   const data = JSON.stringify({
     title: title,
@@ -92,7 +91,7 @@ async function addProduct(
         "Your product has successfully been created",
         ".message-container"
       );
-      //form.reset();
+      form.reset();
     }
 
     if (json.error) {

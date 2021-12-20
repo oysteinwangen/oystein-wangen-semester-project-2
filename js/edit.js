@@ -1,6 +1,7 @@
 import alertMessage from "./components/alert.js";
 import { getToken } from "./utilities/storage.js";
-import deleteButton from "./utilities/deleteButton.js";
+import deleteButton from "./components/deleteButton.js";
+import { baseUrl, productsUrl } from "./settings/api.js";
 
 const token = getToken();
 if (!token) {
@@ -11,7 +12,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
 const slug = urlParams.get("slug");
-const productUrl = "https://strapi-sp2-ow.herokuapp.com/products" + "/" + slug;
+const productUrl = baseUrl + productsUrl + slug;
 
 if (!id) {
   document.location.href = "/";
@@ -91,7 +92,7 @@ async function updateProduct(
   featured,
   image_url
 ) {
-  const url = "https://strapi-sp2-ow.herokuapp.com/products" + "/" + id;
+  const url = baseUrl + productsUrl + id;
 
   const data = JSON.stringify({
     title: title,

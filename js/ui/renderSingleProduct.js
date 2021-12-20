@@ -1,5 +1,6 @@
 import { getExistingCartItems } from "../utilities/cartFunctions.js";
 import { getUsername } from "../utilities/storage.js";
+import cartCounter from "../utilities/cartCounter.js";
 
 const cartItems = getExistingCartItems();
 const username = getUsername();
@@ -104,6 +105,7 @@ function renderSingleProduct(product) {
       );
       saveCartItems(newCartItems);
     }
+    cartCounter();
   }
 
   function saveCartItems(cartItems) {

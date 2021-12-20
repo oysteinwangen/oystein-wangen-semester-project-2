@@ -1,7 +1,6 @@
 import alertMessage from "./components/alert.js";
 import { saveToken, saveUser } from "./utilities/storage.js";
-
-const baseUrl = "https://strapi-sp2-ow.herokuapp.com/";
+import { baseUrl, productsUrl } from "./settings/api.js";
 
 const form = document.querySelector(".login-form");
 const username = document.querySelector("#username");
