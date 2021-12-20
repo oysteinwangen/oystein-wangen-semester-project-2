@@ -1,0 +1,106 @@
+.cart-list {
+  margin-top: 3rem;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--clr-bg-300);
+  margin-bottom: 1rem;
+  & img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  &__info {
+    padding-top: 1rem;
+    width: 100%;
+    &-title {
+      margin-bottom: 0.3rem;
+    }
+    &-sub {
+      display: flex;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: var(--fs-300);
+    }
+    &-price {
+      margin-right: auto;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: color 200ms ease;
+      text-decoration: none;
+      color: var(--clr-neutral-900);
+      & p {
+        margin-right: 0.5rem;
+      }
+      & i {
+        font-size: 1rem;
+      }
+      &:hover,
+      :active {
+        color: var(--clr-accent-400);
+      }
+    }
+  }
+  &__remove {
+    background-color: var(--clr-bg-300);
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    align-self: end;
+    transition: background-color 200ms ease;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    cursor: pointer;
+    &-inner {
+      display: flex;
+      align-items: center;
+      & p {
+        margin-right: 0.5rem;
+        font-size: var(--fs-300);
+      }
+      & i {
+        font-size: 1rem;
+        color: var(--clr-accent-400);
+      }
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &:active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media screen and (min-width: 35em) {
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    & img {
+      width: 5rem;
+      height: 5rem;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+    &__info {
+      margin-right: 1.5rem;
+      max-width: 390px;
+      width: 100%;
+    }
+    &__remove {
+      align-self: center;
+      margin-left: auto;
+    }
+  }
+}

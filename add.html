@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product | Music Port</title>
-    <meta
-      name="description"
-      content="Music Port is an online store, selling musical instruments and equipment"
-    />
+    <title>Add product | Music Port</title>
+    <meta name="description" content="Musical instruments and equipment" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -67,7 +64,25 @@
     </header>
     <main>
       <section class="bg-light">
-        <div class="container single-product">Loading...</div>
+        <div class="page-title container mini-container">
+          <h1>Add product</h1>
+        </div>
+        <div class="container mini-container centered-flex">
+          <div class="message-container mt-m"></div>
+          <form class="vertical-form product-form">
+            <input type="text" id="title" placeholder="Title" />
+            <input type="number" id="price" placeholder="Price" />
+            <label for="featured">Featured?</label>
+            <label class="switch">
+              <input name="featured" type="checkbox" id="featured" />
+              <span class="slider"></span>
+            </label>
+            <textarea id="description" placeholder="Description"></textarea>
+            <label for="image">Upload image</label>
+            <input type="file" name="image" id="image" />
+            <button class="button mt-m" id="login-button">Add product</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="bg-dark">
@@ -76,6 +91,6 @@
       </div>
     </footer>
     <script src="./js/main.js" type="module"></script>
-    <script src="./js/singleProduct.js" type="module"></script>
+    <script src="./js/add.js" type="module"></script>
   </body>
 </html>

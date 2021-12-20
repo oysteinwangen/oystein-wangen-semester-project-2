@@ -2,16 +2,20 @@
   margin: 10px auto;
   padding: 10px 50px;
   border-radius: 3px;
-}
-
-.alert__error-message {
-  color: red;
-  background-color: rgb(248, 219, 219);
-  border: solid 1px red;
-}
-
-.alert__success-message {
-  color: green;
-  background-color: rgb(206, 226, 206);
-  border: solid 1px green;
+  text-align: center;
+  &__error-message {
+    color: red;
+    background-color: rgb(248, 219, 219);
+    border: solid 1px red;
+  }
+  &__success-message {
+    color: green;
+    background-color: rgb(206, 226, 206);
+    border: solid 1px green;
+  }
+  &__normal-message {
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-bg-300);
+    border: solid 1px #ccbeb8;
+  }
 }

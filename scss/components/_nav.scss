@@ -3,17 +3,24 @@
   display: flex;
   justify-content: center;
   min-height: 28.77px;
-  & p {
-    opacity: 0.9;
-  }
   & a {
-    opacity: 0.9;
     margin-left: auto;
-    transition: opacity 200ms ease;
+    transition: color 200ms ease;
   }
-  & a:hover {
-    opacity: 1;
-  }
+}
+
+.admin-menu {
+  margin-left: auto;
+}
+.admin-inactive {
+  color: rgb(207, 207, 207) !important;
+}
+.admin-active {
+  color: white !important;
+}
+
+.menu a {
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 25em) {
@@ -72,19 +79,12 @@
     text-decoration: none;
     transition: opacity 200ms ease;
     &-text {
-      padding: 0.7rem 1rem 0.7rem 1.5rem;
+      padding: 0.7rem 1.5rem;
       color: var(--clr-neutral-900);
       & i {
         margin-right: 3px;
         font-size: 1rem;
       }
-    }
-    &-number {
-      display: flex;
-      align-items: center;
-      padding: 0.7rem 0.7rem;
-      background: var(--clr-accent-400);
-      color: var(--clr-neutral-100);
     }
     &:hover,
     :active {
@@ -113,6 +113,21 @@
   .top-bar .login-link[data-visible="true"] {
     display: flex;
     opacity: 1;
+    & a,
+    span {
+      color: var(--clr-neutral-700);
+      margin-right: 0.8rem !important;
+      &:active {
+        color: var(--clr-neutral-900);
+      }
+    }
+  }
+  .admin-inactive {
+    color: var(--clr-neutral-700) !important;
+  }
+
+  .admin-active {
+    color: var(--clr-neutral-900) !important;
   }
 
   .main-nav {

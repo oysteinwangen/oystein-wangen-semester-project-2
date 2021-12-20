@@ -6,6 +6,10 @@
   font-weight: 700;
   background: var(--bg);
   color: var(--fg);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: var(--fw-300);
   &:hover {
     background: var(--bg-hover);
   }

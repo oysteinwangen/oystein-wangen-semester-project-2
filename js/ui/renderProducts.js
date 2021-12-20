@@ -34,7 +34,7 @@ function renderProducts(results) {
     let cartToggle = false;
 
     const doesObjectExist = cartItems.find(function (cartItem) {
-      return cartItem.id === product._id;
+      return cartItem.slug === product.slug;
     });
 
     if (doesObjectExist) {
@@ -44,7 +44,7 @@ function renderProducts(results) {
 
     productGrid.innerHTML += `
     <div class="product-card">
-        <a href="./product.html?_id=${product._id}" class="product-card__inner">
+        <a href="./product.html?slug=${product.slug}" class="product-card__inner">
               <i class="fas fa-search product-card__read"></i>
               <img
                 src="${product.image.formats.small.url}"
@@ -58,7 +58,7 @@ function renderProducts(results) {
                 <p class="product-card__info-price fs-300">$${product.price}</p>
               </div>
         </a>
-        <div id="cart-button" in-cart="${cartToggle}" data-id="${product._id}" data-title="${product.title}" data-image="${product.image.formats.small.url}" data-price="${product.price}">
+        <div id="cart-button" in-cart="${cartToggle}" data-slug="${product.slug}" data-title="${product.title}" data-image="${product.image.formats.small.url}" data-price="${product.price}">
         ${cartButton}
       </div>
     </div>
@@ -80,7 +80,7 @@ function renderProducts(results) {
       this.setAttribute("in-cart", false);
     }
 
-    const id = this.dataset.id;
+    const slug = this.dataset.slug;
     const title = this.dataset.title;
     const image = this.dataset.image;
     const price = this.dataset.price;
@@ -88,16 +88,16 @@ function renderProducts(results) {
     const currentCartItems = getExistingCartItems();
 
     const productExists = currentCartItems.find(function (cartItem) {
-      return cartItem.id === id;
+      return cartItem.slug === slug;
     });
 
     if (productExists === undefined) {
-      const product = { id: id, title: title, image: image, price: price };
+      const product = { slug: slug, title: title, image: image, price: price };
       currentCartItems.push(product);
       saveCartItems(currentCartItems);
     } else {
       const newCartItems = currentCartItems.filter(
-        (cartItem) => cartItem.id !== id
+        (cartItem) => cartItem.slug !== slug
       );
       saveCartItems(newCartItems);
     }

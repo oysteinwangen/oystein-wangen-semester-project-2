@@ -4,15 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Port</title>
+    <title>Home | Music Port</title>
+    <meta name="description" content="Musical instruments and equipment" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./logo/MusicPortFavicon.svg"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <header>
+      <div class="bg-dark">
+        <div class="container">
+          <div class="top-bar">
+            <p class="fs-300 fw-300">Musical instruments and equipment</p>
+            <div
+              class="admin-menu login-link fs-300 fw-300"
+              data-visible="false"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-light">
+        <div class="container">
+          <div class="main-nav">
+            <a class="main-nav__logo" href="./index.html"
+              ><img src="./logo/MusicPortLogo.svg" alt="Logo"
+            /></a>
+            <button class="mobile-nav-toggle" aria-expanded="false"></button>
+            <nav data-visible="false" class="main-nav__links">
+              <ul>
+                <li><a class="active" href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+              </ul>
+              <a href="./cart.html" class="main-nav__cart">
+                <div class="main-nav__cart-text">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>Cart</span>
+                </div>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="bg-light home-hero">
+        <div class="container hero-image">Loading...</div>
+        <div class="page-title container">
+          <h2>Featured products</h2>
+        </div>
+        <div class="container products" featured="true">Loading...</div>
+      </section>
+    </main>
+    <footer class="bg-dark">
+      <div class="container">
+        <p>Copyright - Music Port</p>
+      </div>
+    </footer>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/home.js" type="module"></script>
+    <script src="./js/getAllProducts.js" type="module"></script>
   </body>
 </html>
