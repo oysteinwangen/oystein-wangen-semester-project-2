@@ -1,5 +1,11 @@
 import alertMessage from "./components/alert.js";
 import { getToken } from "./utilities/storage.js";
+import deleteButton from "./utilities/deleteButton.js";
+
+const token = getToken();
+if (!token) {
+  location.href = "./";
+}
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -31,7 +37,10 @@ const loader = document.querySelector(".loader");
     price.value = details.price;
     featured.checked = details.featured;
     description.value = details.description;
+    image.value = details.image_url;
     idInput.value = details.id;
+
+    deleteButton(details.id);
   } catch (error) {
     console.log(error);
   } finally {
@@ -51,12 +60,14 @@ function submitForm(event) {
   const priceValue = parseFloat(price.value);
   const featuredValue = featured.checked;
   const descriptionValue = description.value.trim();
+  const imageValue = image.value.trim();
   const idValue = idInput.value;
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
     descriptionValue.length === 0 ||
+    imageValue.length === 0 ||
     isNaN(priceValue)
   ) {
     return alertMessage("error", "Invalid values", ".message-container");
@@ -67,11 +78,19 @@ function submitForm(event) {
     priceValue,
     descriptionValue,
     idValue,
-    featuredValue
+    featuredValue,
+    imageValue
   );
 }
 
-async function updateProduct(title, price, description, id, featured) {
+async function updateProduct(
+  title,
+  price,
+  description,
+  id,
+  featured,
+  image_url
+) {
   const url = "https://strapi-sp2-ow.herokuapp.com/products" + "/" + id;
 
   const data = JSON.stringify({
@@ -79,9 +98,8 @@ async function updateProduct(title, price, description, id, featured) {
     price: price,
     featured: featured,
     description: description,
+    image_url: image_url,
   });
-
-  const token = getToken();
 
   const options = {
     method: "PUT",
@@ -95,8 +113,6 @@ async function updateProduct(title, price, description, id, featured) {
   try {
     const response = await fetch(url, options);
     const json = await response.json();
-
-    console.log(json);
 
     if (json.updatedAt) {
       alertMessage(

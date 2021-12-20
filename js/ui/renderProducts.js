@@ -41,6 +41,7 @@ function renderProducts(results) {
       cartToggle = true;
       cartButton = cartButtonInCart;
     }
+    console.log(product.image_url);
 
     productGrid.innerHTML += `
     <div class="product-card">

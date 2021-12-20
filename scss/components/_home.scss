@@ -1,4 +1,7 @@
 .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & img {
     max-height: 30rem;
     object-fit: cover;

@@ -68,6 +68,32 @@ h1 {
   color: var(--clr-neutral-900);
   background-color: var(--clr-bg-300);
   align-self: start;
+  transition: opacity 200ms ease;
+  & i {
+    margin-left: 10px;
+  }
+  &:hover {
+    background-color: var(--clr-bg-300);
+    opacity: 0.9;
+  }
+}
+
+.delete-container {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 12rem;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-bg-300);
+  align-self: start;
+  margin-top: 2rem;
+  transition: opacity 200ms ease;
   & i {
     margin-left: 10px;
   }

@@ -430,6 +430,8 @@ input:checked + .slider:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0.8rem;
 }
 
@@ -921,6 +923,8 @@ h1 {
   background-color: var(--clr-bg-300);
   -ms-flex-item-align: start;
       align-self: start;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
 }
 
 .edit-button i {
@@ -928,6 +932,45 @@ h1 {
 }
 
 .edit-button:hover {
+  background-color: var(--clr-bg-300);
+  opacity: 0.9;
+}
+
+.delete-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.delete-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 12rem;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-bg-300);
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin-top: 2rem;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.delete-button i {
+  margin-left: 10px;
+}
+
+.delete-button:hover {
   background-color: var(--clr-bg-300);
   opacity: 0.9;
 }
@@ -1110,6 +1153,15 @@ h1 {
 }
 
 .hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5rem;
 }
 

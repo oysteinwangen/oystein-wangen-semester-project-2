@@ -1,6 +1,11 @@
 import alertMessage from "./components/alert.js";
 import { getToken } from "./utilities/storage.js";
 
+const token = getToken();
+if (!token) {
+  location.href = "./";
+}
+
 const baseUrl = "https://strapi-sp2-ow.herokuapp.com/";
 
 const form = document.querySelector(".product-form");
@@ -18,18 +23,21 @@ function submitForm(event) {
   message.innerHTML = "";
 
   const titleValue = title.value.trim();
-  const slugValue = titleValue.replace(/[^a-zA-Z0-9]/g, "-");
+  const slugValue =
+    titleValue.replace(/[^a-zA-Z0-9]/g, "-") +
+    "-" +
+    Math.floor(Math.random() * 100);
   const priceValue = parseFloat(price.value);
-  const imageValue = image.files;
+  const imageValue = image.value.trim();
   const featuredValue = featured.checked;
   const descriptionValue = description.value.trim();
-  console.log(imageValue);
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
     descriptionValue.length === 0 ||
-    isNaN(priceValue)
+    isNaN(priceValue) ||
+    imageValue.length === 0
   ) {
     return alertMessage("error", "Invalid values", ".message-container");
   }
@@ -39,11 +47,19 @@ function submitForm(event) {
     slugValue,
     priceValue,
     descriptionValue,
-    featuredValue
+    featuredValue,
+    imageValue
   );
 }
 
-async function addProduct(title, slug, price, description, featured) {
+async function addProduct(
+  title,
+  slug,
+  price,
+  description,
+  featured,
+  image_url
+) {
   const url = baseUrl + "products";
 
   const data = JSON.stringify({
@@ -52,6 +68,7 @@ async function addProduct(title, slug, price, description, featured) {
     price: price,
     featured: featured,
     description: description,
+    image_url: image_url,
   });
 
   const token = getToken();

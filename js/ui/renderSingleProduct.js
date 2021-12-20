@@ -47,7 +47,7 @@ function renderSingleProduct(product) {
             <div class="product-row__left">
               <img
                 class="shadow"
-                src="${product.image.url}"
+                src="${product.image_url}"
                 alt="Product image"
               />
             </div>
@@ -55,7 +55,7 @@ function renderSingleProduct(product) {
             ${authEdit}
               <h1>${product.title}</h1>
               <p class="mt-s">Price: $${product.price}</p>
-                <div id="cart-button" in-cart="${cartToggle}" data-slug="${product.slug}" data-title="${product.title}" data-image="${product.image.formats.small.url}" data-price="${product.price}">
+                <div id="cart-button" in-cart="${cartToggle}" data-slug="${product.slug}" data-title="${product.title}" data-image="${product.image_url}" data-price="${product.price}">
                     ${cartButton}
                 </div>
               <div class="product-description">

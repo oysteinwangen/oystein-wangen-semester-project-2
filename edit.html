@@ -79,11 +79,17 @@
               <span class="slider"></span>
             </label>
             <textarea id="description" placeholder="Description"></textarea>
-            <!-- <label for="image">Upload image</label>
-            <input type="file" name="image" id="image" /> -->
+            <input
+              type="text"
+              name="image"
+              id="image"
+              required
+              placeholder="Image URL"
+            />
             <input id="id" type="hidden" />
             <button class="button mt-m" id="login-button">Edit product</button>
           </form>
+          <div style="max-width: 40ch" class="delete-container"></div>
         </div>
       </section>
     </main>
