@@ -114,35 +114,71 @@ Clone the repo:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
+<!-- USAGE -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The project's UI is based on basic HTML, javascript, custom css properties and utility classes. All functionality and API requests are coded in javascript.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### Typography
+
+All typography is built using custom properties and utility classes in css. The utlity classes er made with responsiveness and consistent UX in mind, and must therefore be utilised.
+
+Example:
+```html
+<p class="fs-300 fw-300">Musical instruments and equipment</p>
+```
+`fs` = font size
+
+`fw` = font weight
+
+The class `.page-title` will align to center.
+
+For a full overview of all properties and utlity classes, [look in the .scss file](https://github.com/oysteinwangen/oystein-wangen-semester-project-2/blob/main/scss/main/_typography.scss).
+
+### Layout
+
+Use the `.container` or `.mini-container` class for all content that should fit within the general document flow.
+
+Classes for top margin and shadows are also available. [View the `.scss` file for a full overview](https://github.com/oysteinwangen/oystein-wangen-semester-project-2/blob/main/scss/main/_layout.scss).
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Colors
 
+All colors used are based on custom properties.
 
-<!-- ROADMAP -->
-## Roadmap
+You can easily customize the colors in `./scss/main/_color.scss` to make it fit your own color scheme.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+```css
+:root {
+  --clr-primary-600: #30475e; /* LIGHT PRIMARY */
+  --clr-primary-700: #2b3542;
+  --clr-primary-800: #222831; /* DARK PRIMARY */
+  --clr-primary-900: #161b22;
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+  --clr-accent-400: #f05454; /* MAIN BRAND COLOR */
+  --clr-accent-500: #d34242;
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+  --clr-bg-200: #f5ede9; /* MAIN LIGHT */
+  --clr-bg-300: #e6d9d3;
 
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #f1f1f1;
+  --clr-neutral-700: #333;
+  --clr-neutral-900: #000;
+}
+```
 
+### Custom API
+
+To use your own API, go to `./js/settings/api.js` and change the base url. Endpoints and meta keys will have to be changed in individual javascript files if not the same.
+
+```js
+export const baseUrl = "https://strapi-sp2-ow.herokuapp.com/";
+export const productsUrl = "products/";
+export const homeUrl = "home/";
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing
