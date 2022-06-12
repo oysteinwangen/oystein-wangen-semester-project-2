@@ -74,6 +74,8 @@ Music Port is a website with ecommerce functionalities for selling musical instr
 * [SASS](https://sass-lang.com/)
 * HTML
 
+*The **backend** was built using the Strapi Headless CMS, and connected using REST API. [Here's the repo link to that, if you're interested.](https://github.com/oysteinwangen/strapi-sp2-ow)*
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
