@@ -57,14 +57,19 @@
 
 Music Port is a website with ecommerce functionalities for selling musical instruments and gear. The framework can be connected to any REST API/Headless CMS, giving you the possibility to use it for any kind of ecommerce business.
 
+**The website has the following features for the end user:
+* Home page with a header image and a products grid containing only featured products
+* Products page containing all products
+* Details page for single products
+* "Add to cart"-buttons on product grids and details pages
+* A cart page pulling in all products added to cart from localStorage
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+**Features for the admin user:
+* Login
+* Edit products
+* Add products
 
 ### Built With
-
 * Vanilla javascript
 * [SASS](https://sass-lang.com/)
 * HTML
