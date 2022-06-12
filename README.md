@@ -1,14 +1,4 @@
 <div id="top"></div>
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -16,19 +6,17 @@
 
   <img src="./logo/MusicPortLogo.svg" alt="Logo" style="height: 80px; max-width: 100%;">
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Music Port // Semester Project 2</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    An ecommerce website with product grids, detail pages, cart functionality, login and editing capabilities.
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://wangen-sp2.netlify.app/">View live website</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/oysteinwangen/oystein-wangen-semester-project-2/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/oysteinwangen/oystein-wangen-semester-project-2/issues">Request Feature</a>
   </p>
 </div>
 
@@ -65,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./MusicPortScreenshot.png" alt="Screenshot of the homepage" width="300px">
+<img src="./MusicPortScreenshot.png" alt="Screenshot of the homepage" width="500">
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
