@@ -9,7 +9,7 @@
   <h3 align="center">Music Port // Semester Project 2</h3>
 
   <p align="center">
-    An ecommerce website with product grids, detail pages, cart functionality, login and editing capabilities.
+    An ecommerce website with product grids, search, detail pages, cart functionality, login and editing capabilities.
     <br />
     <br />
     <a href="https://wangen-sp2.netlify.app/">View live website</a>
@@ -50,21 +50,14 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- DESCRIPTION -->
+## Description
 
 <img src="./MusicPortScreenshot.png" alt="Screenshot of the homepage" width="800">
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Music Port is a website with ecommerce functionalities for selling musical instruments and gear. The framework can be connected to any REST API/Headless CMS, giving you the possibility to use it for any kind of ecommerce business.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -72,16 +65,9 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* Vanilla javascript
+* [SASS](https://sass-lang.com/)
+* HTML
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
